@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --color-bg: #f8fafc;
+  --color-text: #0f172a;
+  --color-border: #e2e8f0;
+  --color-card: #ffffff;
+  --color-muted: #64748b;
+  --color-muted-bg: #f1f5f9;
+  --color-input-bg: #ffffff;
+  --color-input-border: #cbd5e1;
+  --color-hover: #f1f5f9;
+  --color-primary: #0f172a;
+  --color-primary-hover: #1e293b;
+}
+
+.dark {
+  --color-bg: #0f172a;
+  --color-text: #f8fafc;
+  --color-border: #334155;
+  --color-card: #1e293b;
+  --color-muted: #94a3b8;
+  --color-muted-bg: #1e293b;
+  --color-input-bg: #1e293b;
+  --color-input-border: #475569;
+  --color-hover: #1e293b;
+  --color-primary: #f8fafc;
+  --color-primary-hover: #e2e8f0;
+}
+
+@theme {
+  --color-bg: var(--color-bg);
+  --color-text: var(--color-text);
+  --color-border: var(--color-border);
+  --color-card: var(--color-card);
+  --color-muted: var(--color-muted);
+  --color-muted-bg: var(--color-muted-bg);
+  --color-input-bg: var(--color-input-bg);
+  --color-input-border: var(--color-input-border);
+  --color-hover: var(--color-hover);
+  --color-primary: var(--color-primary);
+  --color-primary-hover: var(--color-primary-hover);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
