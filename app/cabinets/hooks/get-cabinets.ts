@@ -58,7 +58,13 @@ export async function getCabinets(
         OR b.name ILIKE '%' || $1 || '%'
       )
       AND ($2 = 'ALL' OR c.status = $2)
-      GROUP BY c.id, b.name, sc.swaps_24h
+      GROUP BY
+        c.id,
+        c.code,
+        b.name,
+        c.status,
+        c.last_heartbeat,
+        sc.swaps_24h
       ORDER BY swaps_24h ${sortDirection}, c.code ASC
       LIMIT $3 OFFSET $4
     `,
