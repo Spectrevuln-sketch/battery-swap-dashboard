@@ -2,4 +2,4 @@ node_modules/
 .next/
 coverage/
 *.tsbuildinfo
-.env
+.env  
